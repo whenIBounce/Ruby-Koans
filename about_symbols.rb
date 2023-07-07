@@ -97,6 +97,6 @@ class AboutSymbols < Neo::Koan
   end
 
   # THINK ABOUT IT:
-  #
+  
   # Why is it not a good idea to dynamically create a lot of symbols?
 end

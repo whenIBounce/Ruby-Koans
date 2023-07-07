@@ -99,7 +99,7 @@ EOS
     assert_equal "Hello, World", original_string
 
     # THINK ABOUT IT:
-    #
+    
     # Ruby programmers tend to favor the shovel operator (<<) over the
     # plus equals operator (+=) when building up strings.  Why?
 
