@@ -21,27 +21,25 @@
     assert_equal "Hello, World", original_string
    ```
 
-    <mark>THINK ABOUT IT</mark>
+> :bulb:THINK ABOUT IT
     
-    Ruby programmers tend to **favor the shovel operator (`<<`) over the
-    plus equals operator (`+=`)** when building up strings.  Why?
+> Ruby programmers tend to **favor the shovel operator (`<<`) over the
+> plus equals operator (`+=`)** when building up strings.  Why?
 
-    When you use the `+=` operator, 
-    Ruby creates a new string 
-    that is the concatenation of the two operands, 
-    then assigns this new string to the variable on the left. 
-    This can be slower and use more memory 
-    when dealing with large strings or 
-    performing the operation many times, 
-    because it creates a lot of temporary string objects.
+> When you use the `+=` operator, Ruby creates a new string 
+> that is the concatenation of the two operands, 
+> then assigns this new string to the variable on the left. 
+> This can be slower and use more memory 
+> when dealing with large strings or 
+> performing the operation many times, 
+> because it creates a lot of temporary string objects.
+> *On the other hand,* the `<<` operator **modifies the original string**, 
+> adding the second string to the end of it. 
+> This is generally faster and uses less memory, 
+> because it doesn't need to create any new strings.
 
-    On the other hand, 
-    the `<<` operator modifies the original string, 
-    adding the second string to the end of it. 
-    This is generally faster and uses less memory, 
-    because it doesn't need to create any new strings.
 # `about_symbols`
- ## ==Method names in Ruby automatically become symbols==
+ ## Method names in Ruby automatically become symbols
 
  ```Ruby
    def test_method_names_become_symbols
@@ -50,9 +48,9 @@
     assert_equal true, Symbol.all_symbols.include?(:test_method_names_become_symbols)
   end
  ```
-==THINK ABOUT IT==
-  
-  Why is it not a good idea to dynamically create a lot of symbols?
+> :bulb:THINK ABOUT IT 
+> 
+> Why is it not a good idea to dynamically create a lot of symbols?
 
 
 # `about_arrays`
@@ -73,10 +71,11 @@
     assert_equal nil, array[5,0]
   end
  ```
- ==THINK ABOUT IT==
- 
-Given `array = [:peanut, :butter, :and, :jelly]`,
-`array[4] = nil but arry[4,0] = []`. WHY??? :confused:
+
+> :bulb:THINK ABOUT IT
+
+> Given `array = [:peanut, :butter, :and, :jelly]`,
+> `array[4] = nil but arry[4,0] = []`. WHY??? :confused:
 
 
 # `about_array_assignment`
