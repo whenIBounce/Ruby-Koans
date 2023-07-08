@@ -48,9 +48,9 @@ class AboutHashes < Neo::Koan
       hash.fetch(:doesnt_exist)
     end
 
-    # THINK ABOUT IT:
+    #! THINK ABOUT IT:
     #
-    # Why might you want to use #fetch instead of #[] when accessing hash keys?
+    #! Why might you want to use #fetch instead of #[] when accessing hash keys?
     # My answer: because we want to raise a KeyError
 
   end
@@ -138,6 +138,7 @@ class AboutHashes < Neo::Koan
     assert_equal true, hash[:three].object_id == hash[:two].object_id
   end
 
+  #! What does this do? What is a block
   def test_default_value_with_block
     hash = Hash.new {|hash, key| hash[key] = [] }
 
