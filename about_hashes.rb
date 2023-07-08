@@ -141,6 +141,19 @@ class AboutHashes < Neo::Koan
   #! What does this do? What is a block
   def test_default_value_with_block
     hash = Hash.new {|hash, key| hash[key] = [] }
+    # In Ruby, a block can be passed to a method as an implicit argument. 
+    # This is what's happening when you pass a block to Hash.new. 
+    
+    # The block is not being used as the default value itself; 
+    # rather, it's being used 
+    # to determine what the default value should be 
+    # when a nonexistent key is accessed. 
+    # The block is a function that's called to generate the default value.
+
+    # Here's the key part: 
+    # When you try to access a key that doesn't exist, 
+    # Ruby's Hash class internally calls the block you provided, 
+    # passing the hash itself and the key you're trying to access as arguments.
 
     hash[:one] << "uno"
     hash[:two] << "dos"
